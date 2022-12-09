@@ -1,0 +1,18 @@
+<div>
+<h1>Word Count:</h1><p id="wordCountContentNumber"></p>
+</div>
+<hr>
+<div id="articlecontent">
+<p>One two three four five six seven eight nine ten</p>
+</div>
+<script>
+function getWordCount(str) {
+	console.clear();
+     return str.trim().split(/\s+/).length;
+}
+
+const sentence = document.getElementById('articlecontent').textContent;
+console.log('Total words: '+getWordCount(sentence));
+document.getElementById("wordCountContentNumber").innerHTML = getWordCount(sentence);
+
+</script>
